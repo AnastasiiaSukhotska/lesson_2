@@ -89,11 +89,11 @@ if (month<1 || month>12) alert ('Ваша дата не верна');
 let year = +prompt('Введите год');
 if (year<1) alert ('Ваша дата не верна');
 
-if(month===1||month===3||month===5||month===7||month===8||month===10||month===12 && day>31){
-	alert ('Ваша дата не верна');
+if((month===1||month===3||month===5||month===7||month===8||month===10||month===12) && day>31){
+	alert ('1 Ваша дата не верна');
 }
-else if (month===4||month===6||month===9||month===11 && day>30){
-	alert ('Ваша дата не верна');
+else if ((month===4||month===6||month===9||month===11) && day>30){
+	alert ('2 Ваша дата не верна');
 }
 else if (((year%4===0 && year%100 !==0) || (year%4===0 && year%100 ===0 && year%400===0)) && month===2 && day>29 ){
 	alert ('Ваша дата не верна');
@@ -101,7 +101,7 @@ else if (((year%4===0 && year%100 !==0) || (year%4===0 && year%100 ===0 && year%
 else if (month===2 && ((year%4 !==0) || (year%4===0 && year%100 ===0 && year%400 !==0)) && day>28){
 	alert ('Ваша дата не верна');
 }
-else ('Ваша дата верна');
+else alert ('Ваша дата верна');
 
 let a = +prompt('Введите а');
 let b = +prompt('Введите б');
