@@ -119,6 +119,57 @@ else{
 	alert('x='+x);
 }
 
+let aNumber = +prompt('Введите а');
+let bNumber = +prompt('Введите б');
+let cNumber = +prompt('Введите c');
+let xNumber1;
+let xNumber2;
+
+let discriminant=Math.pow(bNumber,2)-4*aNumber*cNumber;
+if(discriminant<0){
+	alert('Уравнение не имеет решения');
+}
+else if (discriminant=0){
+	xNumber1=((-(bNumber)+Math.sqrt(discriminant))/2*aNumber);
+	alert('x='+xNumber1);
+}
+else{
+	xNumber1=((-(bNumber)+Math.sqrt(discriminant))/2*aNumber);
+	xNumber2=((-(bNumber)-Math.sqrt(discriminant))/2*aNumber);
+		alert('x1='+ xNumber1+', x2='+xNumber2)
+}
+
+
+
+
+let blindWidth= +prompt('Введите ширину жалюзи в см');
+let blindHeight= +prompt('Введите высоту жалюзи в см');
+let materialName;
+let materialPrice;
+let material= +prompt('Выберете материал \n\ 1-пластик \n\ 2-текстиль\n\ 3-алюминий');
+if (material===1){
+	materialName='Пластик';
+	materialPrice=200;
+}
+else if(material===2){
+	materialName='Текстиль';
+	materialPrice=250
+}
+else if (material===3) {
+	materialName='Алюминий';
+	materialPrice=350;
+}
+else ('Неверные данные');
+let blindSquare=blindHeight/100*blindWidth/100;
+blindSquare=blindSquare.toFixed(2);
+
+let totalPrice=blindSquare*materialPrice;
+totalPrice=totalPrice.toFixed(2);
+alert('Цена за кв.м: '+ materialPrice + ' грн\n Площадь: '+ blindSquare + ' кв.м \n К оплате: '+ totalPrice + ' грн' );
+
+
+
+
 
 
 
